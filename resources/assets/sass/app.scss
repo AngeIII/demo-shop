@@ -7,6 +7,8 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
+@import "_chosen-variables.scss";
+@import "~bootstrap-chosen/bootstrap-chosen.scss";
 @import "components/search";
 @import "components/table";
 @import "components/pagination";

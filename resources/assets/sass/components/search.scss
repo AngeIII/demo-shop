@@ -8,5 +8,10 @@
     outline: none;
     margin: 0;
     border: $input-btn-border-width solid $input-border-color;
+    height: auto;
   }
+}
+
+.chosen-container-single .chosen-search input[type="text"] {
+  padding: 0;
 }

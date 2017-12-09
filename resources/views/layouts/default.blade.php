@@ -20,7 +20,7 @@
         </div>
     </div>
 @show
-@yield('layouts.partials.scripts')
+@include('layouts.partials.scripts')
 @include('layouts.partials.tracking')
 </body>
 </html>

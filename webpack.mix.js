@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix.js([ 'resources/assets/js/app.js', 'node_modules/bootstrap-chosen/dist/chosen.jquery-1.4.2/chosen.jquery.min.js' ], 'public/js')
   .sass('resources/assets/sass/app.scss', 'public/css')
   .options({
     postCss: [

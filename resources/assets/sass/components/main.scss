@@ -55,3 +55,23 @@ html, body {
 .btn {
   cursor: pointer;
 }
+
+.text-left {
+  text-align: left;
+}
+
+.alert {
+  ul {
+    margin: 0;
+  }
+}
+
+.form-group.has-error {
+  label {
+    color: red;
+    &::after {
+      content: '!!';
+      display: inline-block;
+    }
+  }
+}

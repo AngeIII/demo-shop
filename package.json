@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "bootstrap-chosen": "1.4.2",
         "font-awesome": "4.7.0",
         "materialize-css": "0.100.2",
         "normalize.css": "7.0.0",

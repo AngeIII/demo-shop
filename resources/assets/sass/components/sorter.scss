@@ -7,7 +7,7 @@
 
   padding-left: $arrow_w+5px;
   position: relative;
-  display: block;
+  display: inline-block;
 
   &::before,
   &::after {

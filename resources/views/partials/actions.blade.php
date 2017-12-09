@@ -46,7 +46,7 @@ if (!isset($disabled)) {
                 <span class="btn btn-default disabled"><i class="fa fa-trash"></i></span>
             @else
                 {!! Form::open(['route' => [$controller.'.destroy', $item->id], 'method' => 'DELETE', 'data-confirm' => 1]) !!}
-                <button type="submit" class="btn btn-primary" title="Delete">
+                <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');" title="Delete">
                     <i class="fa fa-trash"></i>
                 </button>
                 {!! Form::close() !!}
