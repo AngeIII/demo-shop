@@ -18,19 +18,29 @@ class ProductsTableSeeder extends Seeder
             return;
         }
 
-        factory(Product::class, 20)->create();
+        factory(Product::class, 10)->create();
         Product::create(
             [
                 'name' => 'Coca Cola',
-                'count' => 10,
-                'price' => 1.0,
+                'price' => 1.8,
             ]
         );
         Product::create(
             [
                 'name' => 'Pepsi Cola',
-                'count' => 10,
-                'price' => 1.0,
+                'price' => 1.6,
+            ]
+        );
+        Product::create(
+            [
+                'name' => 'Fanta',
+                'price' => 0.8,
+            ]
+        );
+        Product::create(
+            [
+                'name' => 'Beer',
+                'price' => 1.2,
             ]
         );
     }

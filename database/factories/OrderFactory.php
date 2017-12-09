@@ -1,5 +1,7 @@
 <?php
 
+use App\Product;
+use App\User;
 use Faker\Generator as Faker;
 
 /*
@@ -14,11 +16,12 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(
-    App\Product::class,
+    App\Order::class,
     function (Faker $faker) {
         return [
-            'name' => $faker->unique()->word,
-            'price' => $faker->randomFloat(2, 0.1, 30),
+            'user_id' => factory(User::class, 1)->create()[0],
+            'product_id' => factory(Product::class, 1)->create()[0],
+            'count' => $faker->numberBetween(1, 100),
         ];
     }
 );

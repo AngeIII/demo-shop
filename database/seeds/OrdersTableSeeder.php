@@ -1,9 +1,9 @@
 <?php
 
-use App\User;
+use App\Order;
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class OrdersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,12 +12,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        if (User::all()->count()) {
+        if (Order::all()->count()) {
             $this->command->warn('Table not empty. Seeding skipped.');
 
             return;
         }
 
-        factory(User::class, 30)->create();
+        factory(Order::class, 15)->create();
     }
 }
