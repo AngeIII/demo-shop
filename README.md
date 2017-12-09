@@ -10,6 +10,7 @@ Demo Shop created by laravel 5.5
 
 ## Testing
 - php vendor/bin/phpunit
+- php ci/phpcs.phar --standard=ci/codestyle.xml app/ tests/
 
 ## Building
 - yarn dev
