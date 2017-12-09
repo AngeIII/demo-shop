@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Shop;
 use App\Http\Controllers\Controller;
 use App\Order;
 use App\Product;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -22,6 +23,7 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $sort = $request->input('sort') ?: 'created_at,desc';
+        $type = $request->input('type') ?: '0';
         $data = explode(',', $sort);
         $key = $data[0];
         $by = isset($data[1]) ? $data[1] : 'asc';
@@ -31,6 +33,18 @@ class OrderController extends Controller
             ->join('products', 'products.id', '=', 'orders.product_id')
             ->select('orders.*')
             ->orderBy($key, $by);
+        switch ($type) {
+            case '1':
+                // Last 7 Days
+                $carbon = Carbon::today()->subDays(7)->toDateTimeString();
+                $builder->whereDate('orders.created_at', '>=', $carbon);
+                break;
+            case '2':
+                // Today
+                $carbon = Carbon::today()->toDateTimeString();
+                $builder->whereDate('orders.created_at', '>=', $carbon);
+                break;
+        }
 
         $builder = $this->manageSearch(
             $request,

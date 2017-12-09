@@ -11,7 +11,7 @@
                     <small>{{ $action }}</small>
                 @endif
             </div>
-            <div class="offset-md-5 col-md-4">
+            <div class="offset-md-3 col-md-6">
                 @include('partials.search')
             </div>
         </div>

@@ -10,6 +10,15 @@
     border: $input-btn-border-width solid $input-border-color;
     height: auto;
   }
+  select.form-control {
+    flex: 1;
+    &:not([size]):not([multiple]) {
+      height: auto;
+    }
+  }
+  input.form-control {
+    flex: 2;
+  }
 }
 
 .chosen-container-single .chosen-search input[type="text"] {

@@ -13,8 +13,6 @@
             <div class="title m-b-md">
                 <h1>@yield('title')</h1>
             </div>
-            <section>
-            </section>
             @include('layouts.partials.alert')
             @yield('content')
         </div>
