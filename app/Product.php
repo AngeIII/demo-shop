@@ -4,17 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Jedrzej\Sortable\SortableTrait;
 
 class Product extends Model
 {
     use SoftDeletes;
-    use SortableTrait;
-
-    /**
-     * @var array
-     */
-    public $sortable = ['*'];
 
     /**
      * The attributes that are mass assignable.
@@ -23,7 +16,19 @@ class Product extends Model
      */
     protected $fillable = [
         'name',
-        'count',
+    ];
+
+    protected $guarded = [
         'price',
     ];
+
+    /**
+     * Get list of license types.
+     *
+     * @return array
+     */
+    public static function getList()
+    {
+        return self::orderBy('name')->pluck('name', 'id')->toArray();
+    }
 }

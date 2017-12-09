@@ -15,7 +15,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
     ];
 
     /**
@@ -24,6 +26,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    /**
+     * Get list of license types.
+     *
+     * @return array
+     */
+    public static function getList()
+    {
+        return self::orderBy('name')->pluck('name', 'id')->toArray();
+    }
 }

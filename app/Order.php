@@ -3,14 +3,37 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Jedrzej\Sortable\SortableTrait;
 
 class Order extends Model
 {
-    use SortableTrait;
+    public static $validationRules = [
+        'user_id' => 'required|exists:users,id',
+        'product_id' => 'required|exists:products,id',
+        'count' => 'required|numeric|min:1',
+    ];
 
     /**
+     * The attributes that are mass assignable.
+     *
      * @var array
      */
-    public $sortable = ['*'];
+    protected $fillable = [
+        'user_id',
+        'product_id',
+        'count',
+    ];
+
+    protected $guarded = [
+        'sum',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo('App\Product');
+    }
 }
