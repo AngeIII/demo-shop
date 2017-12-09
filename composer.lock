@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5eba86da256ddeb8084c32d3d10e18d3",
+    "content-hash": "d03186847a94894dd984a681e9d80552",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -407,6 +407,63 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
+            "name": "jedrzej/sortable",
+            "version": "0.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jedrzej/sortable.git",
+                "reference": "070a76561fc6a47b2eb085b6421c4e14f7e0c2c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jedrzej/sortable/zipball/070a76561fc6a47b2eb085b6421c4e14f7e0c2c0",
+                "reference": "070a76561fc6a47b2eb085b6421c4e14f7e0c2c0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "*",
+                "illuminate/support": "*"
+            },
+            "require-dev": {
+                "codeception/codeception": "2.0.*",
+                "codeception/specify": "*",
+                "mockery/mockery": "*"
+            },
+            "suggest": {
+                "jedrzej/searchable": "Allows filtering your models using request parameters",
+                "jedrzej/withable": "Allows eager loading of relations using request parameters"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jedrzej\\": "src/Jedrzej/",
+                    "Illuminate\\": "vendor/laravel/framework/src/Illuminate/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jędrzej Kuryło",
+                    "email": "jedrzej.kurylo@gmail.com"
+                }
+            ],
+            "description": "Sortable trait for Laravel's Eloquent models - sort your models using request parameters",
+            "homepage": "https://github.com/jedrzej/sortable",
+            "keywords": [
+                "api",
+                "eloquent",
+                "laravel",
+                "model",
+                "request",
+                "sort",
+                "sortable"
+            ],
+            "time": "2016-03-23T10:08:49+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.5.24",
             "source": {
@@ -601,6 +658,117 @@
                 "psysh"
             ],
             "time": "2017-07-13T13:11:05+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v5.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6",
+                "reference": "2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.5.*",
+                "illuminate/routing": "5.5.*",
+                "illuminate/session": "5.5.*",
+                "illuminate/support": "5.5.*",
+                "illuminate/view": "5.5.*",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "illuminate/database": "5.5.*",
+                "mockery/mockery": "~0.9.4",
+                "phpunit/phpunit": "~5.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "http://laravelcollective.com",
+            "time": "2017-08-31T14:46:03+00:00"
+        },
+        {
+            "name": "laravelnews/laravel-twbs4",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelnews/laravel-twbs4.git",
+                "reference": "1e89f61adb57ebb6f2815e859a8602229451610d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelnews/laravel-twbs4/zipball/1e89f61adb57ebb6f2815e859a8602229451610d",
+                "reference": "1e89f61adb57ebb6f2815e859a8602229451610d",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "LaravelNews\\Presets\\BootstrapFour\\BootstrapPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelNews\\Presets\\BootstrapFour\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Redmond",
+                    "email": "paulrredmond@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 frontend preset for Twitter Bootstrap 4",
+            "time": "2017-11-10T21:16:12+00:00"
         },
         {
             "name": "league/flysystem",

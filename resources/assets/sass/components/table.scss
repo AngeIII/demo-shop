@@ -1,0 +1,54 @@
+/* Tables
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.table {
+  font-weight: 400;
+
+  .snug {
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .c {
+    text-align: center;
+  }
+
+  .r {
+    text-align: right;
+  }
+
+  & > tbody {
+    & > tr {
+      & > td {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+    &:hover {
+      overflow: visible;
+    }
+  }
+
+  .code {
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 13px;
+  }
+
+  .deleted {
+    text-decoration: line-through;
+  }
+
+  .fa-arrow-up {
+    color: $green;
+  }
+
+  .fa-arrow-down {
+    color: $red;
+  }
+}

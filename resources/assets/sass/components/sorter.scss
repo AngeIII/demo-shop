@@ -1,0 +1,51 @@
+/* Table sorters
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.sorter {
+  $arrow_w: 8px;
+  $arrow_h: 14px;
+
+  padding-left: $arrow_w+5px;
+  position: relative;
+  display: block;
+
+  &::before,
+  &::after {
+    content: '\f0dc'; // fa-sort
+    font-family: FontAwesome;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: #ddd;
+    line-height: 1;
+    margin-top: -($arrow_h / 2);
+    z-index: 10;
+  }
+
+  &::after {
+    display: none;
+    z-index: 11;
+    color: #333;
+  }
+
+  &.sorted-asc {
+    &::after {
+      content: '\f0de'; // fa-sort-asc
+    }
+  }
+
+  &.sorted-desc {
+    &::after {
+      content: '\f0dd'; // fa-sort-desc
+
+    }
+  }
+
+  &.sorted-desc,
+  &.sorted-asc {
+    &::after {
+      display: block;
+    }
+  }
+}

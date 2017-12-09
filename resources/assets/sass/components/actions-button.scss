@@ -1,0 +1,16 @@
+/* Action button
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.action-buttons {
+  .btn {
+    padding: 4px 8px;
+  }
+
+  form {
+    display: inline-block;
+  }
+
+  .btn-empty {
+    pointer-events: none;
+    visibility: hidden;
+  }
+}

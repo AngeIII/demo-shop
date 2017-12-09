@@ -1,0 +1,12 @@
+.search-form {
+  .input-group-addon {
+    border: none;
+  }
+  input[type=text]:not(.browser-default).form-control {
+    background-color: transparent;
+    border-radius: 0;
+    outline: none;
+    margin: 0;
+    border: $input-btn-border-width solid $input-border-color;
+  }
+}
