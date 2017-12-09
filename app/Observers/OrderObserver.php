@@ -2,10 +2,7 @@
 
 namespace App\Observers;
 
-use App\Bundle;
 use App\Order;
-use Illuminate\Support\Facades\Storage;
-use App\Jobs\BuildBundleZip;
 
 class OrderObserver
 {

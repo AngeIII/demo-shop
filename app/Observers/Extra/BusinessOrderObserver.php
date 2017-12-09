@@ -12,7 +12,7 @@ class BusinessOrderObserver
         $product = $order->product;
         $count = $order->count;
         if ($product->name === 'Pepsi Cola' && $count >= 3) {
-            $order->sum = round($order->sum * 0.8); // 20% off
+            $order->sum = round($order->sum * 0.8, 2); // 20% off
         }
     }
 
