@@ -6,7 +6,6 @@ use App\Order;
 use App\Product;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 
 class OrderTest extends TestCase
 {
